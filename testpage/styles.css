@@ -1,0 +1,135 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4; /* Un gris claro de fondo */
+    color: #333; /* Texto principal oscuro */
+}
+
+header {
+    background-color: #9e1b32; /* Rojo similar al del logo */
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.logo-container img {
+    max-height: 80px;
+}
+
+main {
+    padding: 20px;
+}
+
+section {
+    background-color: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    color: #2c7da0; /* Azul similar al del texto "CIUDAD DE MÉXICO" */
+    margin-top: 0;
+}
+
+#seleccion-alcaldia select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+#prediccion p {
+    margin-bottom: 10px;
+}
+
+#prediccion input[type="file"] {
+    margin-bottom: 15px;
+}
+
+#prediccion button {
+    background-color: #9e1b32; /* Rojo similar al del logo */
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#prediccion button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+#resultado-prediccion {
+    margin-top: 20px;
+    padding: 15px;
+    border: 1px solid #eee;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+}
+
+#resultado-prediccion h3 {
+    color: #2c7da0; /* Azul similar al del texto "CIUDAD DE MÉXICO" */
+    margin-top: 0;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #eee;
+    color: #777;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+#retroalimentacion {
+    background-color: #f9f9f9;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#retroalimentacion h2 {
+    color: #2c7da0;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.calificacion label, .sugerencia label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+#boton-enviar-retroalimentacion {
+    background-color: #28a745; /* Un color verde para indicar acción */
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+#boton-enviar-retroalimentacion:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+#mensaje-retroalimentacion {
+    margin-top: 15px;
+    font-weight: bold;
+    color: #007bff; /* Un color azul para el mensaje */
+}

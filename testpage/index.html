@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clasificador de Estado de Calles CDMX</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tensorflow/4.22.0/tf.min.js"></script>
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="logo_cdmx.png" alt="Logo Gobierno CDMX">
+            <h1>Clasificador de Estado de Calles</h1>
+        </div>
+    </header>
+
+    <main>
+        <section id="seleccion-alcaldia">
+            <h2>Selecciona la Alcaldía de la Cámara</h2>
+            <select id="alcaldias">
+                <option value="">-- Selecciona una alcaldía --</option>
+                <option value="alvaro-obregon">Álvaro Obregón</option>
+                <option value="azcapotzalco">Azcapotzalco</option>
+                <option value="benito-juarez">Benito Juárez</option>
+                <option value="coyoacan">Coyoacán</option>
+                <option value="cuajimalpa">Cuajimalpa de Morelos</option>
+                <option value="cuauhtemoc">Cuauhtémoc</option>
+                <option value="gustavo-a-madero">Gustavo A. Madero</option>
+                <option value="iztacalco">Iztacalco</option>
+                <option value="iztapalapa">Iztapalapa</option>
+                <option value="magdalena-contreras">La Magdalena Contreras</option>
+                <option value="miguel-hidalgo">Miguel Hidalgo</option>
+                <option value="milpa-alta">Milpa Alta</option>
+                <option value="tlahuac">Tláhuac</option>
+                <option value="tlalpan">Tlalpan</option>
+                <option value="venustiano-carranza">Venustiano Carranza</option>
+                <option value="xochimilco">Xochimilco</option>
+            </select>
+        </section>
+
+        <section id="prediccion">
+            <h2>Realizar Predicción</h2>
+            <p>Aquí podrás cargar la imagen de la calle para analizar.</p>
+            <input type="file" id="imagen-calle" accept="image/*">
+            <img id="image-preview" src="#" alt="Vista previa de la imagen" style="max-width: 100%; height: auto; margin-top: 15px; display: none;">
+
+            <div>
+                <input type="button" name="predict" onclick="predict_street_state()" value="Predecir Estado">
+            </div>
+
+            <div id="resultado-prediccion">
+                <h3>Resultado:</h3>
+                <p id="estado-calle"></p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 Clasificador de Estado de Calles CDMX</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
