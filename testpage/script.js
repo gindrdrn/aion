@@ -49,7 +49,7 @@ async function predict_street_state() {
         // la carga podría ser diferente (e.g., `tf.sequential().fromLayers(...)` o usando un modelo predefinido).
         // Si tu modelo es una exportación de un InceptionV3 fine-tuneado, esta línea es correcta.
         console.time(`Tiempo de carga y predicción`);
-        const model = await tf.loadLayersModel('./tensorflowjs-model/model.json'); // Asegúrate de que esta ruta sea correcta
+        const model = await tf.loadLayersModel('./tensorflowjs-model-optimization/model.json'); // Asegúrate de que esta ruta sea correcta
         const pred = model.predict(imageproc);
         await pred.data(); // Espera a que la predicción se complete
         console.timeEnd(`Tiempo de carga y predicción`);
